@@ -127,3 +127,14 @@ def game_hash
 end
 
 # Write code here
+
+def num_points_scored(name)
+  game_hash[:home][:players].find{
+    |player|
+    if player[:player_name]==name
+      player[:points]
+    else
+      nil
+    end
+  }
+end
